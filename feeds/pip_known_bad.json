@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "name": "Community Defender — Known-Bad PyPI Packages",
+    "updated": "2026-05-13",
+    "source": "CVE-2026-45321 (Mini Shai-Hulud)",
+    "description": "Maps package name (lowercase) to list of known-bad versions. Empty list = all versions suspect."
+  },
+  "mistralai": ["2.4.6"],
+  "guardrails-ai": ["0.10.1"],
+  "litellm": [],
+  "telnyx": [],
+  "lightning": []
+}

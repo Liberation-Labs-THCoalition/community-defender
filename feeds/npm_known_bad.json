@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "name": "Community Defender — Known-Bad npm Packages",
+    "updated": "2026-05-13",
+    "source": "CVE-2026-45321 (Mini Shai-Hulud), community reports",
+    "description": "Compromised npm package scopes and specific versions. Scopes list means ANY package under that scope may be affected. Packages dict maps name to list of known-bad versions (empty list = all versions suspect)."
+  },
+  "scopes": [
+    "@tanstack",
+    "@uipath",
+    "@mistralai",
+    "@opensearch-project",
+    "@cap-js",
+    "@squawk",
+    "@draftauth",
+    "@draftlab",
+    "@tallyui",
+    "@beproduct",
+    "@supersurkhet",
+    "@ml-toolkit-ts",
+    "@mesadev",
+    "@dirigible-ai"
+  ],
+  "packages": {
+    "safe-action": [],
+    "cross-stitch": [],
+    "ts-dna": [],
+    "wot-api": [],
+    "cmux-agent-mcp": [],
+    "nextmove-mcp": [],
+    "agentwork-cli": []
+  }
+}
