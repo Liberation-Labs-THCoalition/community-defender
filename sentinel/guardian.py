@@ -68,15 +68,17 @@ def run_guardian(
         # Check for findings
         for result in results:
             if not result.success:
-                bus.send(f"Skill {result.skill} failed: {result.raw[:200]}", "high")
+                for t in bus._transports:
+                    t.send(f"Skill {result.skill} failed: {result.raw[:200]}", "high")
                 continue
 
             for assessment in result.assessments:
                 if assessment.severity in ("critical", "high"):
-                    bus.send(
-                        f"[{assessment.severity.upper()}] {assessment.title}: {assessment.details[:200]}",
-                        assessment.severity,
-                    )
+                    for t in bus._transports:
+                        t.send(
+                            f"[{assessment.severity.upper()}] {assessment.title}: {assessment.details[:200]}",
+                            assessment.severity,
+                        )
 
             # Update beliefs from observations
             for obs in result.observations:
